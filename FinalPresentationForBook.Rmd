@@ -1,5 +1,5 @@
 ---
-title: "Final Presentation sf package"
+title: "The sf package"
 author: "Kamal"
 date: "5/20/2019"
 output: html_document
@@ -81,6 +81,7 @@ NYCIncome <- fread("https://raw.githubusercontent.com/kamalabdel97/FinalPresenta
 
 ```{r eval=TRUE, include=FALSE}
 #Reading From File
+library(sf)
 NycCommunityDistricts <- read_sf("https://data.cityofnewyork.us/api/geospatial/yfnk-k7r4?method=export&format=GeoJSON")
 
 NYCIncome <- fread("https://raw.githubusercontent.com/kamalabdel97/FinalPresentation/master/Median%20Incomes.csv")
@@ -138,3 +139,5 @@ ggplot() +
 Github: [kamalabdel97](http://www.github.com/kamalabdel97)
 
 Linkedin: [Kamal Abdelrahman](http://www.linkedin.com/in/KamalAbdel)
+
+
