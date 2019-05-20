@@ -81,24 +81,29 @@ You're analyzing disparities of income levels across New York City and want to u
 
 # Step 1 - Reading In Shapefile/Data
 
+```r
+install.packages("sf")
+```
 
 ```r
 library(sf)
 
 #Reading From File
-NycCommunityDistricts &lt;- read_sf("/Users/kamal/Documents/GitHub/Laundro-Hydro Startup/Shapefiles/NYC Community Districts Shapefile/Community Districts/geo_export_56ffd4c2-465e-4b9e-ab06-8ab9ebaa596f.shp")
+NycCommunityDistricts &lt;- read_sf("/Users/kamal/Documents/GitHub/FinalPresentation/Community Districts/geo_export_56ffd4c2-465e-4b9e-ab06-8ab9ebaa596f.shp")
 
 #Reading From Website
 NycCommunityDistricts &lt;- read_sf("https://data.cityofnewyork.us/api/geospatial/yfnk-k7r4?method=export&amp;format=GeoJSON")
 
-NYCIncome &lt;- read.csv("/Users/kamal/Documents/GitHub/Laundro-Hydro Startup/Data/Median Incomes.csv")
+NYCIncome &lt;- fread("https://raw.githubusercontent.com/kamalabdel97/FinalPresentation/master/Median%20Incomes.csv")
 ```
 
 
 
 `read_sf` - Reads in simple features
+---
+# New York Stand Up!
 
-&lt;img src="FinalPresentation_files/figure-html/unnamed-chunk-3-1.png" width="30%" style="float:right; padding:0px" /&gt;
+&lt;img src="FinalPresentation_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -125,12 +130,7 @@ ggplot() +
 ```
 
 
-
-```
-## Warning: Ignoring unknown aesthetics: na.value
-```
-
-&lt;img src="FinalPresentation_files/figure-html/unnamed-chunk-6-1.png" width="45%" style="float:right; padding:0px" /&gt;
+&lt;img src="FinalPresentation_files/figure-html/unnamed-chunk-7-1.png" width="45%" style="float:right; padding:0px" /&gt;
 
 `ggplot` - Invokes the ggplot syntax for data visualization
 
@@ -138,6 +138,16 @@ ggplot() +
 * `NycCommunityDistrictsIncome` - The shapefile dataframe containing BOTH the shapefile (spatial) and income levels (attribute) 
 
 * `Income` - The statistical value in the shapefile dataframe for each community district
+
+---
+#Final Map!
+
+```
+## Warning: Ignoring unknown aesthetics: na.value
+```
+
+&lt;img src="FinalPresentation_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
+
 
 ---
 #Let's Connect! 
